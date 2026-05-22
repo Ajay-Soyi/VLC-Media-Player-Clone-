@@ -1,0 +1,56 @@
+body{
+    height: 100vh;
+    background-color: rgb(238, 238, 238);
+}
+/* header - title bar styling */
+header{
+    height: 80px;
+}
+.title-bar{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-left: 10px;
+    height: 50%;
+}
+h1{
+    font-size: 1rem;
+}
+/* menu-bar styling */
+.menu-bar{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    height: 50%;
+    margin-left: 10px;
+}
+
+/* footer styling */
+footer{
+    height: 80px;
+}
+
+/* main styling */
+main{
+    height: calc(100vh - 80px - 80px);
+    background-color: black;
+}
+
+/* div styling for menu bar */
+.menu-bar div{
+    cursor: pointer;
+}
+
+/* menu bar list item */
+.list-menu-bar{
+    position: absolute;
+    background-color: rgb(238, 238, 238);
+    top: 13.7px;
+    padding-left: 10px
+}
+.playback-option{
+    position: relative;
+}
+.list-menu-bar li{
+    padding-right: 80px;
+}
