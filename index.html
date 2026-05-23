@@ -1,37 +1,41 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>VLC Media Player</title>
-    <link rel="stylesheet" href="./reset.css">
-    <link rel="stylesheet" href="./styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="./reset.css" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
     <header>
-        <div class="title-bar">
-            <img src="./images/VLC.png" alt="vlc logo" height="20px">
-            <h1>VLC media player</h1>
+      <div class="title-bar">
+        <img src="./images/VLC.png" alt="vlc logo" height="20px" />
+        <h1>VLC media player</h1>
+      </div>
+      <div class="menu-bar">
+        <div class="open-option" id="open-opt">
+          <span>Open</span>
+          <input type="file" id="video-file">
         </div>
-        <div class="menu-bar">
-            <div class="open-option">
-                <span>Open</span>
-            </div>
-            <div class="playback-option">
-                <span>Playback</span>
-                <ul class="list-menu-bar">
-                    <li>Speed Up</li>
-                    <li>Speed Down</li>
-                </ul>
-            </div>
-            <div class="audio-option">
-                <span>Audio</span>
-            </div>
+        <div class="playback-option">
+          <span>Playback</span>
+          <ul class="list-menu-bar">
+            <li>Speed Up</li>
+            <li>Speed Down</li>
+          </ul>
         </div>
+        <div class="audio-option">
+          <span>Audio</span>
+          <ul class="list-menu-bar">
+            <li>Volume Up</li>
+            <li>Volume Down</li>
+          </ul>
+        </div>
+      </div>
     </header>
     <main></main>
-    <footer>
-
-    </footer>
-</body>
+    <footer></footer>
+    <script src="./script.js"></script>
+  </body>
 </html>

@@ -45,12 +45,33 @@ main{
 .list-menu-bar{
     position: absolute;
     background-color: rgb(238, 238, 238);
-    top: 13.7px;
-    padding-left: 10px
+    top: 8px;
+    padding-left: 10px;
+    display: none;
 }
-.playback-option{
+.playback-option,.audio-option{
     position: relative;
 }
 .list-menu-bar li{
     padding-right: 80px;
 }
+.menu-bar > div{
+    padding-bottom: 5px;
+}
+
+/* hover property added on playback and audio and open */
+.playback-option:hover,.audio-option:hover,.open-option:hover{
+    background: lightblue;
+}
+.playback-option:hover .list-menu-bar{
+    display: block;
+}
+.audio-option:hover .list-menu-bar{
+    display: block;
+}
+
+/* video file styles */
+input{
+    display: none;
+}
+
