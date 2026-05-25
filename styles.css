@@ -75,3 +75,14 @@ input{
     display: none;
 }
 
+.video-style{
+    height: 100%;
+}
+
+/* main video area styling */
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
