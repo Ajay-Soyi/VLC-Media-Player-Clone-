@@ -7,6 +7,13 @@ const volumeUp = document.getElementById("volumeUp");
 const volumeDown = document.getElementById("volumeDown");
 const toast = document.querySelector(".toast");
 const timer = document.getElementById("timer");
+const playPauseContainer = document.querySelector(".play-pause");
+const play = document.getElementById("play");
+const pause = document.getElementById("pause");
+const back = document.getElementById("back");
+const forward = document.getElementById("forward");
+const stopVar = document.getElementById("stop");
+const fullScreen = document.getElementById("full-screen");
 
 const fileAttached = () => {
   inputElement.click();
@@ -23,7 +30,8 @@ const playVideo = (obj) => {
   videoElem.src = link;
   videoArea.appendChild(videoElem);
   videoElem.play();
-  // videoElem.controls = true;
+  playPauseContainer.classList.remove("play-pause");
+  videoElem.controls = false;
 
   // logic for time update
   const currTime = document.getElementById("current-time");
@@ -79,7 +87,52 @@ const playVideo = (obj) => {
 
   videoElem.addEventListener("timeupdate", updateTime);
   videoElem.addEventListener("loadedmetadata", endTimeUpdateAndTimeline);
-};
+
+  // play pause and other functionalites.
+  const pauseVideo = () => {
+    videoElem.pause();
+    pause.style.display = "none";
+    play.style.display = "block";
+  };
+  const playVideo = () => {
+    videoElem.play();
+    play.style.display = "none";
+    pause.style.display = "block";
+  };
+  const backwardVideo = () => {
+    if (videoElem.currentTime <= 4) {
+      return;
+    }
+    videoElem.currentTime -= 5;
+  };
+  const forwardVideo = () => {
+    if (videoElem.currentTime > videoElem.duration - 5) {
+      return;
+    }
+    videoElem.currentTime += 5;
+  };
+
+  const stopVideo = () => {
+    videoElem.pause();
+    videoElem.remove();
+    videoElem.currentTime = 0;
+    timer.value = "0";
+    inputElement.value="";
+    currTime.textContent = "--/--/--";
+    endTime.textContent = "--/--/--";
+  };
+
+  const fullScreenVideo = () => {
+    videoArea.requestFullscreen();
+  }
+
+  pause.addEventListener("click", pauseVideo);
+  play.addEventListener("click", playVideo);
+  back.addEventListener("click", backwardVideo);
+  forward.addEventListener("click", forwardVideo);
+  stopVar.addEventListener("click", stopVideo);
+  fullScreen.addEventListener("click",fullScreenVideo);
+};  
 
 openOption.addEventListener("click", fileAttached);
 inputElement.addEventListener("change", playVideo);

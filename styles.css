@@ -125,6 +125,15 @@ footer input {
   margin-left: 0.5rem;
 }
 
-.play-pause {
+.play-pause{
+  visibility:hidden ;
+}
+
+#play{
   display: none;
+}
+
+i{
+  cursor: pointer;
+  margin-right:0.8rem ;
 }
