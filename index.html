@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>VLC Media Player</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
     <link rel="stylesheet" href="./reset.css" />
     <link rel="stylesheet" href="./styles.css" />
   </head>
@@ -16,7 +20,7 @@
       <div class="menu-bar">
         <div class="open-option" id="open-opt">
           <span>Open</span>
-          <input type="file" id="video-file">
+          <input type="file" id="video-file" />
         </div>
         <div class="playback-option">
           <span>Playback</span>
@@ -35,7 +39,24 @@
       </div>
     </header>
     <main></main>
-    <footer></footer>
+    <div class="toast"></div>
+    <footer>
+      <div class="timeline">
+        <span id="current-time">--/--/--</span>
+        <input type="range" name="timer" id="timer" value="0"/>
+        <span id="end-time">--/--/--</span>
+      </div>
+      <div class="functions">
+        <div class="play-pause">
+          <i class="fa-solid fa-play"></i>
+          <i class="fa-solid fa-pause"></i>
+        </div>
+        <i class="fa-solid fa-backward"></i>
+        <i class="fa-solid fa-stop"></i>
+        <i class="fa-solid fa-forward"></i>
+        <i class="fa-solid fa-expand"></i>
+      </div>
+    </footer>
     <script src="./script.js"></script>
   </body>
 </html>
